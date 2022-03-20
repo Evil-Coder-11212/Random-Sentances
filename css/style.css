@@ -1,0 +1,109 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+:root {
+  --primary-color: rgb(255, 95, 9);
+  --secondary-color: #ffffff;
+  --font-family: Nunito, sans-serif;
+  --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --all-transition: transform ease-in-out 0.3s 0s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+.main-content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--primary-color);
+}
+
+.main-content > h1 {
+  margin-bottom: 20px;
+  padding: 5px;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.container {
+  width: 550px;
+  height: 250px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+}
+
+.inputs-container {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.inputs-container > input {
+  width: 270px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  padding-left: 15px;
+  background-color: var(--secondary-color);
+  color: black;
+  box-shadow: var(--box-shadow);
+}
+.container > p {
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+  transition: var(--all-transition);
+  padding: 0 10px;
+  max-height: 100px;
+  overflow-y: hidden;
+}
+
+.container > button {
+  width: 200px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: var(--secondary-color);
+  color: black;
+  margin-bottom: 15px;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transition: var(--all-transition);
+}
+
+/* NTH CHILD */
+.inputs-container > input::placeholder {
+  color: black;
+}
+
+/* Animations */
+.container > button:active {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  box-shadow: none;
+  border: 1px solid var(--secondary-color);
+}
+
+.container > button:hover {
+  transform: scale(1.09);
+}
